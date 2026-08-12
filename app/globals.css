@@ -258,7 +258,7 @@ h2 em {
 .portrait img {
   object-fit: cover;
   border-radius: 38% 38% 21% 21%;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: normal;
 }
 .initials {
   position: absolute;
@@ -1095,4 +1095,200 @@ footer small {
   .project-marquee div {
     animation: none;
   }
+}
+
+/* Theme controls and dark-mode surface tokens */
+.theme-toggle,
+.theme-toggle-placeholder {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+}
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  border: 1px solid #e1e4ed;
+  border-radius: 50%;
+  background: transparent;
+  color: #6062da;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+.theme-toggle:hover {
+  background: #ededff;
+  border-color: #cfd1ff;
+  transform: rotate(8deg);
+}
+.theme-toggle:focus-visible,
+.menu-btn:focus-visible,
+.slider-controls button:focus-visible,
+.dots button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #9295ff;
+  outline-offset: 3px;
+}
+.mobile-nav .theme-toggle {
+  margin: 12px 0 4px;
+}
+
+html {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+html.dark body {
+  background: #111528;
+  color: #f2f3fb;
+}
+html.dark .header,
+html.dark .mobile-nav {
+  background: rgba(25, 29, 52, 0.86);
+  border-color: #343958;
+  box-shadow: 0 10px 35px #080b171f;
+}
+html.dark .brand b,
+html.dark .desktop-nav a:hover,
+html.dark .mobile-nav a,
+html.dark .mobile-nav .resume,
+html.dark .skill-card h3,
+html.dark .timeline h3,
+html.dark .project-copy h3,
+html.dark .education-card h2 {
+  color: #f2f3fb;
+}
+html.dark .desktop-nav a,
+html.dark .lede,
+html.dark .about-body > p,
+html.dark .section-head > p,
+html.dark .timeline-content > p,
+html.dark .project-copy > p:not(.period),
+html.dark .education-card p:not(.eyebrow),
+html.dark .contact-detail small {
+  color: #aeb4ca;
+}
+html.dark .resume,
+html.dark .button.primary {
+  background: #777aff;
+  box-shadow: 0 10px 25px #777aff22;
+}
+html.dark .theme-toggle {
+  border-color: #4b527a;
+  color: #ffe18a;
+}
+html.dark .theme-toggle:hover {
+  background: #303556;
+  border-color: #777aff;
+}
+html.dark .hero:before {
+  background: radial-gradient(circle at 50% 45%, #303567 0, #1c2042 27%, transparent 65%);
+}
+html.dark .portrait {
+  box-shadow: 35px 35px 80px #080b1f66;
+}
+html.dark .portrait-grid {
+  background: linear-gradient(135deg, #363b72, #777aff 45%, #171a32);
+}
+html.dark .portrait-caption,
+html.dark .stat span,
+html.dark .process-item h3,
+html.dark footer > p {
+  color: #9da4bf;
+}
+html.dark .stat {
+  border-color: #343953;
+}
+html.dark .stat strong,
+html.dark .highlights span {
+  color: #f2f3fb;
+}
+html.dark .marquee {
+  background: #171b30;
+  border-color: #303550;
+}
+html.dark .about,
+html.dark .projects,
+html.dark .education,
+html.dark .process {
+  background: #111528;
+}
+html.dark .skills-section {
+  background: #171b30;
+}
+html.dark .skill-card,
+html.dark .project-card,
+html.dark .education-card,
+html.dark .contact-form {
+  background: #1c2139;
+  border-color: #343958;
+  box-shadow: 0 15px 35px #080b171f;
+}
+html.dark .skill-row,
+html.dark .timeline-content,
+html.dark .education-card,
+html.dark .process-item {
+  border-color: #343958;
+}
+html.dark .skill-row,
+html.dark .skill-row small {
+  color: #d8dbea;
+}
+html.dark .skill-row small {
+  color: #aeb4ca;
+}
+html.dark .skill-icon,
+html.dark .edu-icon {
+  background: #30345f;
+  color: #aeb1ff;
+}
+html.dark .experience {
+  background: #15192c;
+}
+html.dark .timeline-content,
+html.dark .timeline-dot {
+  background: #1c2139;
+  border-color: #3a4064;
+}
+html.dark .timeline-item:not(:last-child):before {
+  border-color: #4a5076;
+}
+html.dark .slider-controls button,
+html.dark .button.secondary {
+  background: #1c2139;
+  border-color: #454b70;
+  color: #eef0fa;
+}
+html.dark .slider-controls button:hover {
+  background: #777aff;
+}
+html.dark .tags span {
+  background: #30345f;
+  color: #c2c4ff;
+}
+html.dark .education-card > strong {
+  color: #aeb1ff;
+}
+html.dark .contact {
+  background: #0d1020;
+}
+html.dark .contact-form input,
+html.dark .contact-form textarea {
+  background: #15192d;
+  color: #f2f3fb;
+  border-color: #3c4266;
+}
+html.dark .contact-form input::placeholder,
+html.dark .contact-form textarea::placeholder {
+  color: #727994;
+}
+html.dark footer {
+  background: #0a0d19;
+}
+html.dark footer a,
+html.dark footer small {
+  color: #a1a7bf;
 }

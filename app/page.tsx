@@ -21,6 +21,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { profile, skills, skillGroups, experience, projects, process } from './data'
+import ThemeToggle from './components/ThemeToggle'
 
 const reveal = {
   hidden: { opacity: 0, y: 24 },
@@ -71,6 +72,7 @@ export default function Home() {
             </a>
           ))}
         </nav>
+        <ThemeToggle />
         <a className="resume" href="/Rashid-Ilyas-Resume.pdf" download>
           Resume <ArrowUpRight size={15} />
         </a>
@@ -91,6 +93,7 @@ export default function Home() {
                 {n}
               </a>
             ))}
+            <ThemeToggle />
             <a className="resume" href="/Rashid-Ilyas-Resume.pdf">
               Download Resume <ArrowUpRight size={15} />
             </a>
@@ -154,7 +157,7 @@ export default function Home() {
             <div className="portrait-grid" />
             {image ? (
               <Image
-                src="/images/profile.jpg"
+                src="/images/profile.png"
                 alt="Rashid Ilyas"
                 fill
                 onError={() => setImage(false)}
